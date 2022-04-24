@@ -1,4 +1,4 @@
-package 빠른AplusB;
+package 빠른AplusBX;
 
 import java.util.Scanner;
 
