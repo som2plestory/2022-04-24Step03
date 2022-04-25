@@ -9,11 +9,22 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();
+		int a = n/10; //10의 자리
+		int b = n%10; //1의 자리
+		int n1=a+b;
 		int sum = 0;
-		for(int i=1; i<=n; i++) {
-			sum +=i;
+		while(true) {
+			sum++;
+			if(n1==n) {
+				System.out.println(sum);
+				break;
+			}else {
+			a=b*10;
+			b=a;
+			n1=a+b;
+			}
 		}
-		System.out.println(sum);
 		sc.close();
+		
 	}
 }
