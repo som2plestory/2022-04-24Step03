@@ -1,4 +1,4 @@
-package 빠른AplusBX;
+package 더하기사이클;
 
 import java.util.Scanner;
 
@@ -9,22 +9,22 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();
-		int a = n/10; //10의 자리
-		int b = n%10; //1의 자리
-		int n1=a+b;
-		int sum = 0;
+		int n1 = 10*(n%10) + ((n/10 + n%10))%10;
+		int i=0;
 		while(true) {
-			sum++;
+			i++;
 			if(n1==n) {
-				System.out.println(sum);
+				System.out.println(i);
 				break;
 			}else {
-			a=b*10;
-			b=a;
-			n1=a+b;
+				int a = n1%10;
+				int n2 = n1/10 + a;
+				int b = n2%10;
+				n1 = a*10 +b ;
 			}
-		}
+		} 
+
 		sc.close();
-		
 	}
 }
+

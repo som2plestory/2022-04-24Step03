@@ -1,4 +1,4 @@
-package AplusB_4X;
+package AplusB_4;
 
 import java.util.Scanner;
 
@@ -8,11 +8,8 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		String a = null;
-		while((a=sc.next())!=null && a.length()!=0) {
-			int n = sc.nextInt();
-			int m = sc.nextInt();
-			System.out.println(n+m);
+		while(sc.hasNext()) { //boolean타입) 입력이 있을 때만 실행
+			System.out.println(sc.nextInt()+sc.nextInt());
 		}
 		
 		sc.close();
